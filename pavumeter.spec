@@ -1,6 +1,6 @@
 %define name pavumeter
-%define version 0.9.2
-%define release %mkrel 2
+%define version 0.9.3
+%define release %mkrel 1
 %define title Pulseaudio Volume Meter
 %define longtitle Volume meter for Pulseaudio sound server for Linux
 
@@ -8,7 +8,7 @@ Summary: Volume meter for Pulseaudio sound server for Linux
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}.tar.bz2
+Source0: %{name}-%{version}.tar.gz
 License: LGPL
 Group: Sound
 Url: http://0pointer.de/lennart/projects/pavumeter
@@ -30,7 +30,6 @@ for the Pulseaudio sound server.
 %setup -q
 
 %build
-#export CPPFLAGS=-I%_includedir/alsa
 %configure2_5x
 %make
 
@@ -49,7 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root)
 %doc README LICENSE
-%_bindir/%name
-%_datadir/applications/%name.desktop
+%{_bindir}/%{name}
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/%{name}-record.desktop
 
 
