@@ -15,7 +15,7 @@ Url: http://0pointer.de/lennart/projects/pavumeter
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtkmm2.4-devel
 BuildRequires: libglademm2.4-devel
-BuildRequires: libpulseaudio-devel
+BuildRequires: libpulseaudio-devel >= 0.9.7
 BuildRequires: desktop-file-utils
 BuildRequires: lynx
 BuildRequires: desktop-file-utils
