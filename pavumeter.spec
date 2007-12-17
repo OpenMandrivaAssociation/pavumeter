@@ -12,7 +12,6 @@ Source0: %{name}-%{version}.tar.gz
 License: LGPL
 Group: Sound
 Url: http://0pointer.de/lennart/projects/pavumeter
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtkmm2.4-devel
 BuildRequires: libglademm2.4-devel
 BuildRequires: libpulseaudio-devel >= 0.9.7
