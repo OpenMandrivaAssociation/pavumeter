@@ -43,6 +43,7 @@ sed -i "s/^Icon=.*/Icon=%{name}/" %{buildroot}%{_datadir}/applications/%{name}.d
 sed -i "s/^Icon=.*/Icon=%{name}-record/" %{buildroot}%{_datadir}/applications/%{name}-record.desktop
 desktop-file-install --vendor="" \
   --remove-category="Application" \
+  --add-category="GTK" \
   --add-category="X-MandrivaLinux-Multimedia-Sound" \
   --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*.desktop
 
