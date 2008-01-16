@@ -1,6 +1,6 @@
 %define name pavumeter
 %define version 0.9.3
-%define release %mkrel 2
+%define release %mkrel 3
 %define title Pulseaudio Volume Meter
 %define longtitle Volume meter for Pulseaudio sound server for Linux
 
@@ -54,10 +54,12 @@ ln -s %{name}.png %{buildroot}%{_miconsdir}/%{name}-record.png
 ln -s %{name}.png %{buildroot}%{_iconsdir}/%{name}-record.png
 
 %post
-%{_bindir}/update-desktop-database %{_datadir}/applications > /dev/null
+%update_desktop_database
+%update_menus
 
 %postun
-if [ -x %{_bindir}/update-desktop-database ]; then %{_bindir}/update-desktop-database %{_datadir}/applications > /dev/null ; fi
+%clean_desktop
+%clean_menus
 
 %clean
 rm -rf %{buildroot}
