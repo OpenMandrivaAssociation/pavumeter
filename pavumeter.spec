@@ -53,13 +53,17 @@ install -D -m 0644 %SOURCE2 %{buildroot}%{_iconsdir}/%{name}.png
 ln -s %{name}.png %{buildroot}%{_miconsdir}/%{name}-record.png
 ln -s %{name}.png %{buildroot}%{_iconsdir}/%{name}-record.png
 
+%if %mdkversion < 200900
 %post
 %update_desktop_database
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_desktop_database
 %clean_menus
+%endif
 
 %clean
 rm -rf %{buildroot}
