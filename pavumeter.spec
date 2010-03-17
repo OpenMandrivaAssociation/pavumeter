@@ -1,6 +1,6 @@
 %define name pavumeter
 %define version 0.9.3
-%define release %mkrel 5
+%define release %mkrel 6
 %define title Pulseaudio Volume Meter
 %define longtitle Volume meter for Pulseaudio sound server for Linux
 
