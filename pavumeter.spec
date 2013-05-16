@@ -12,7 +12,7 @@ License:	LGPL
 Group:		Sound
 Url:		http://0pointer.de/lennart/projects/pavumeter
 BuildRequires:	gtkmm2.4-devel
-BuildRequires:	libglademm2.4-devel
+BuildRequires:	pkgconfig(libglademm-2.4)
 BuildRequires:	pkgconfig(libpulse)
 BuildRequires:	desktop-file-utils
 BuildRequires:	lynx
