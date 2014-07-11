@@ -1,7 +1,7 @@
 Summary:	Volume meter for Pulseaudio sound server for Linux
 Name:		pavumeter
 Version:	0.9.3
-Release:	17
+Release:	18
 License:	LGPLv2
 Group:		Sound
 Url:		http://0pointer.de/lennart/projects/pavumeter
