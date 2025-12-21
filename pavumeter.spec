@@ -8,6 +8,11 @@ Url:		https://0pointer.de/lennart/projects/pavumeter
 Source0:	%{name}-%{version}.tar.gz
 Source1:	%{name}-16.png
 Source2:	%{name}-32.png
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	desktop-file-utils
 BuildRequires:	desktop-file-utils
 BuildRequires:	lynx
